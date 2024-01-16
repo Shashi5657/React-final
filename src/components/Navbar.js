@@ -29,7 +29,7 @@ export default function Navbar(props) {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                About
+                {props.about}
               </a>
             </li>
           </ul>
@@ -48,4 +48,14 @@ export default function Navbar(props) {
       </div>
     </nav>
   );
+}
+
+Navbar.propTypes = {
+    title : PropTypes.string.isRequired,
+    about : PropTypes.string.isRequired
+}
+
+Navbar.defaultProps = {
+    title : 'set title here',
+    about : 'set about here'
 }
